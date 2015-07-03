@@ -140,11 +140,10 @@ body {
     background: white;
     font-family: sans-serif;
     letter-spacing: 1px;
-    margin: 20px 5%;
+    margin: 20px auto;
     font-weight: 300;
-    width:90%;
+    width: 90%;
 }
-
 nav a {
     text-decoration: none;
     font-size: 2em;
@@ -156,78 +155,81 @@ nav span {
     background-color: #FCF1AD;
     font-size: 0.8em;
     padding: 10px;
-    padding-right:12px;
+    padding-right: 12px;
     display: block;
     text-align: right;
 }
 .container {
-    width:100%;
-    margin-top:2px;
+    width: 100%;
+    margin-top: 2px;
 }
 .word {
     padding: 15px 20px;
     margin-bottom: 2px;
-    width:50%;
-    float:left;
-    display:inline-block;
-    background: linear-gradient(
-        to right,
-        #EDEDED,
-        white);
+    width: 50%;
+    float: left;
+    display: inline-block;
+    background: linear-gradient( to right, #EDEDED, white);
 }
-.word input{
+.word input {
     background: transparent;
-    border:none;
+    border: none;
     outline: none;
     border-bottom: 1px dotted black;
+    width: 70px;
 }
-
-.loading{
+.loading {
     animation: rotate 1s infinite linear;
     border: 2px dotted black;
-    display:none;
-    border-radius:10px;
+    display: none;
+    border-radius: 10px;
     padding: 2px;
-    margin-bottom:0;
-    transition:0.3s;
+    margin-bottom: 0;
+    transition: 0.3s;
 }
-
-@keyframes rotate{
+@keyframes rotate {
     from {
-        transform: rotate(0deg);        
+        transform: rotate(0deg);
     }
-    to{
+    to {
         transform: rotate(360deg);
     }
 }
 .btn {
-    display:inline-block;
+    display: inline-block;
     float: right;
     padding: 17px 24px;
     background-color: #C7C7C7;
     font-size: 0.8em;
     text-transform: uppercase;
     cursor: pointer;
-
 }
-
-.btn:hover{
-    opacity:0.6;
+.btn:hover {
+    opacity: 0.6;
 }
-
 .definition {
-
-    display:inline-block;
-    font-size:0.8em;
-    min-height:300px;
+    display: block;
+    margin-top:50px;
+}
+.definition li {
+    line-height: 1.4;
+    width: 90%;;
+    border-bottom: 1px dotted black;
+    padding: 10px 0px;
+    margin-left: 15px;
+    margin-top: 40px;
+    font-size: 0.8em;
 
 }
-.definition li{
-    line-height:1.4;
-    width:90%;
-    border-bottom:1px dotted black;
-    padding: 10px 25px;
-    display:inline-block;
+.definition div {
+    display: block;
+    padding: 15px 20px;
+    margin-top:-45px;
 }
 
+@media (min-width:760px){
+    body{
+        width:760px;
+    }
 
+}

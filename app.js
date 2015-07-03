@@ -1,9 +1,11 @@
 var app = {
+    
     // Text introduced
     $word: $('.word input'),
 
     // Actions to be handled of the App
     actions: function () {
+        // Action for de button
         $('#btn').click(function () {
             app.ajaxCall(app.$word);
         });
@@ -15,7 +17,8 @@ var app = {
             }
         });
     },
-    // Just call the server for the 
+    
+    // Just call the server for the definition
     ajaxCall: function (word) {
         $('.loading').css("display", "inline-block");
         return $.ajax({
@@ -30,17 +33,17 @@ var app = {
                 app.handleData(data);
             },
             error: function () {
-                console.log('Error.');
-                $('.loading').css('display', 'none');
+                app.errorData();
             }
         });
     },
 
-    // JSON, definitions...
+    // Function to handle data
     handleData: function (data) {
 
-        // Showing the spinner...
-        $('.loading').css('display', 'none');
+        // Out the spinner...
+        var $spinner = $('.loading');
+        $spinner.fadeOut(1000);
 
         // Some information on the console
         console.log('Successful.');
@@ -50,23 +53,44 @@ var app = {
         app.displaying(data);
 
     },
-
+    
+    // Handles AJAX errors...
+    errorData: function () {
+        
+        // Out the spinner...
+        var $spinner = $('.loading');
+        $spinner.fadeOut(1000);
+        
+        // Shows the user the problem...
+        var $def = $('.definition');
+        $def.empty();
+        $def.append('<div>Nothing found...</div>');
+    },
+    
     // Format the JSON into HTML
     displaying: function (data) {
         var $definition = $('.definition');
         $definition.empty();
-        $definition.fadeOut(300, function () {;
+        $definition.fadeOut(300, function () {
             var html = '';
+            
+            // Exception for not found words...
             for (var i = 0; i < data.definitions.length; i++) {
-                html += '<li>' + i + '- ' + data.definitions[i].text + '</li>';
+                html += '<li>' + i + '. ' + data.definitions[i].text + '</li>';
             };
+            
+            // Exception for not found words...
+            if(html===''){
+                html='<div>Nothing found...</div>';
+            };
+                
             $definition.append(html);
         });
         $definition.fadeIn(300);
     }
 };
 
-//Initialize the APP
+//Initialize the App
 (function start() {
     app.actions();
 })();
