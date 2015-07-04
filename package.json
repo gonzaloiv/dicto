@@ -1,0 +1,19 @@
+{
+  "name": "dictoapp",
+  "version": "1.0.0",
+  "description": "Dictionary based on API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzaloiv/dicto.git"
+  },
+  "author": "gonzaloiv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonzaloiv/dicto/issues"
+  },
+  "homepage": "https://github.com/gonzaloiv/dicto#readme"
+}
