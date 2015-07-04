@@ -74,7 +74,7 @@ var app = {
         $definition.fadeOut(300, function () {
             var html = '';
             
-            // Exception for not found words...
+            // Iterate on the JSON definitions...
             for (var i = 0; i < data.definitions.length; i++) {
                 html += '<li>' + i + '. ' + data.definitions[i].text + '</li>';
             };
