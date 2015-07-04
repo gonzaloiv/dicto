@@ -169,14 +169,14 @@ nav span {
     width: 50%;
     float: left;
     display: inline-block;
-    background: linear-gradient( to right, #EDEDED, white);
+    background: linear-gradient(to right, #EDEDED, white);
 }
 .word input {
     background: transparent;
     border: none;
     outline: none;
     border-bottom: 1px solid black;
-    width: 70px;
+    width: 100px;
 }
 .loading {
     animation: rotate 1s infinite linear;
@@ -225,7 +225,7 @@ nav span {
     display: block;
     padding: 15px 20px;
     margin-top:-45px;
-}
+}a
 @media (min-width:760px){
     body{
         width:760px;
