@@ -180,6 +180,7 @@ nav span {
 }
 .loading {
     animation: rotate 1s infinite linear;
+    -webkit-animation:rotate 1s infinite linear;
     border: 2px dotted black;
     display: none;
     border-radius: 10px;
@@ -188,6 +189,14 @@ nav span {
     transition: 0.3s;
 }
 @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate {
     from {
         transform: rotate(0deg);
     }
@@ -209,25 +218,25 @@ nav span {
 }
 .definition {
     display: block;
-    margin-top:55px;
+    margin-top: 55px;
 }
 .definition li {
     line-height: 1.4;
-    width: 90%;;
+    width: 90%;
+    ;
     border-bottom: 1px dotted black;
     padding: 15px 0px;
     margin-left: 15px;
     margin-top: 40px;
     font-size: 0.8em;
-
 }
 .definition div {
     display: block;
     padding: 15px 20px;
-    margin-top:-45px;
-}a
-@media (min-width:760px){
-    body{
-        width:760px;
+    margin-top: -45px;
+}
+@media (min-width:960px) {
+    body {
+        width:960px ;
     }
 }
