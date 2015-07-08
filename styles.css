@@ -223,11 +223,10 @@ nav span {
 .definition li {
     line-height: 1.4;
     width: 90%;
-    ;
     border-bottom: 1px dotted black;
     padding: 15px 0px;
     margin-left: 15px;
-    margin-top: 40px;
+    margin-top: 60px;
     font-size: 0.8em;
 }
 .definition div {

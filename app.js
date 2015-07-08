@@ -1,5 +1,5 @@
 var app = {
-    
+
     // Text introduced
     $word: $('.word input'),
 
@@ -17,7 +17,7 @@ var app = {
             }
         });
     },
-    
+
     // Just call the server for the definition
     ajaxCall: function (word) {
         $('.loading').css("display", "inline-block");
@@ -53,37 +53,37 @@ var app = {
         app.displaying(data);
 
     },
-    
+
     // Handles AJAX errors...
     errorData: function () {
-        
+
         // Out the spinner...
         var $spinner = $('.loading');
         $spinner.fadeOut(1000);
-        
+
         // Shows the user the problem...
         var $def = $('.definition');
         $def.empty();
-        $def.append('<div>Nothing found...</div>');
+        $def.append('<li>Nothing found...</li>');
     },
-    
+
     // Format the JSON into HTML
     displaying: function (data) {
         var $definition = $('.definition');
         $definition.empty();
         $definition.fadeOut(300, function () {
             var html = '';
-            
+
             // Iterate on the JSON definitions...
             for (var i = 0; i < data.definitions.length; i++) {
                 html += '<li>' + i + '. ' + data.definitions[i].text + '</li>';
             };
-            
+
             // Exception for not found words...
             if(html===''){
-                html='<div>Nothing found...</div>';
+                html='<li>Nothing found...</li>';
             };
-                
+
             $definition.append(html);
         });
         $definition.fadeIn(300);
@@ -91,6 +91,6 @@ var app = {
 };
 
 //Initialize the App
-(function start() {
-    app.actions();
-})();
+(function start($) {
+    app.actions($);
+})(jQuery);
