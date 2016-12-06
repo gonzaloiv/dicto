@@ -1,0 +1,11 @@
+{
+  "name": "dicto",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
