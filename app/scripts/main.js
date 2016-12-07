@@ -62,10 +62,10 @@ var app = {
 
   // SERVICES
   getDefinition: function(word) {
-    $('.loading').css("display", "inline-block");
+    $('.loading').css('display', 'inline-block');
     return $.ajax({
-      type: "GET",
-      url: "https://montanaflynn-dictionary.p.mashape.com/define?word=" + word.val(),
+      type: 'GET',
+      url: 'https://montanaflynn-dictionary.p.mashape.com/define?word=' + word.val(),
       dataType: 'json',
       beforeSend: function(xhr) {
         xhr.setRequestHeader('X-Mashape-Key', 't0hpNRS5lFmshfF3Wv3tU0jgkGEep1x7N3CjsnCU6Cmgb2oFV2');
